@@ -1,7 +1,15 @@
 /** Swap this file (and /public/profile.jpg) to personalize the invitation. */
 
+declare global {
+  interface Window {
+    __INVITE_PHOTO?: string
+  }
+}
+
 export const invitation = {
-  photoUrl: `${import.meta.env.BASE_URL}profile.jpg`,
+  photoUrl:
+    (typeof window !== 'undefined' && window.__INVITE_PHOTO) ||
+    `${import.meta.env.BASE_URL}profile.jpg`,
   photoAlt: 'a very serious date prospect',
   headline: 'Will you go on a date with me?',
   yesLabel: 'YES ♥',
