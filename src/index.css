@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+:root {
+  --burgundy: #8b2252;
+  --pink: #f48fb1;
+  --pink-hot: #e91e8c;
+  --lavender: #ce93d8;
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans: Inter, system-ui, sans-serif;
+}
